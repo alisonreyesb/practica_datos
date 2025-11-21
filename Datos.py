@@ -1,8 +1,8 @@
-
+#Clase Datos que contiene los atributos y metodos get y set
 class Datos:
     def __init__(self):
         pass
-    
+#cracion de los datos privados    
     @property
     def nombre(self)->str:
         return self._nombre
@@ -10,8 +10,7 @@ class Datos:
     @nombre.setter
     def nombre(self,nombre:str):
         self._nombre=nombre
-        
-        
+
     @property
     def apellido(self)->str:
         return self._apellido

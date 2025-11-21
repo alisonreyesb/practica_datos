@@ -1,35 +1,35 @@
-#importacion de las clases
-from Datos import Datos
+#importacion de las clases necesarias
+from Datos import Datos 
 from GestionDatos import GestionDatos
-print("MENU DE LISTA")
-#instanciacion de las clases
-gt=GestionDatos()
-dt=Datos()
-lista=[]
-#creacion del bucle para el menu
-while True:
-#opciones para el menu    
+#Creacion del objeto de GestionDatos
+gd=GestionDatos()
+#Menu para interactuar con el usuario
+menuActivo=True
+while menuActivo:
+    #Se realiza un menu para verifica las funciones
+    print("No Registros: ", len(gd.lista))
+    print("Menu de opciones")
     print("1. Agregar")
     print("2. Consultar")
     print("3. Salir")
-    print("4. Mostrar Lista")
-#espacio para escribir la opcion q se desea utilizar
-    opcion=int(input("Ingrese la opcion q desea utilizar: " ))
-#opcion numero uno nos permite agrega los datos de la persona a la lista
-    if opcion==1:
-        print("Ingrese los datos de la persona")
-        dt.nombre=str(input("Ingrese el nombre de la persona: "))
-        dt.apellido=str(input("Ingrese el apellido: "))
-        dt.edad=int(input("Ingrese la edad: "))
-        dt.correo=str(input("Ingrese el correo: "))
-        dt.cedula=int(input("Ingrese el numero de cedula: "))
-        gt.agregar_datos(dt)
-#opcion numero dos nos permite consultar un elemento de la lista con el numero de la cedula
-    elif opcion==2:
-        cedula=int(input("Ingrese el numero de cedula que  desea consultar:  "))
-        gt.ConsultarDato(cedula)
-        print(gt.ConsultarDatos(cedula))
-#opcion 3 nos permite salir del programa
-    elif opcion==3:
+    #Se solicita que ingrese la opcion que va a elegir
+    opcion=input("Ingrese una opcion: ")
+
+    if opcion == "1":
+        dt=Datos()
+        dt.nombre = str(input("Ingrese su nombre: "))
+        dt.apellido = str(input("Ingrese su apeellido: "))
+        dt.cedula = int(input("Ingrese su numero de cedula: "))
+        dt.correo = str(input("Ingrese su correo: "))
+        dt.edad = int(input("Ingrese su edad: "))
+        gd.agregar_datos(dt)
+    
+    elif opcion == "2":
+        cedula = int(input("Ingrese numero de cedula para la Consulta: "))
+        result=gd.consultarDatos(cedula)
+        print(result.nombre,result.apellido,result.edad,result.correo,result.cedula)
+
+    elif opcion == "3":
+        #Con esta opcion se sale del programa
         print("Saliendo del programa")
         break
