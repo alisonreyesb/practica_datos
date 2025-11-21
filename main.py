@@ -42,9 +42,9 @@ while menuActivo:
         dt.edad = int(input("Ingrese su edad: "))
         gd.modificarDatos(cedula,dt)
     
-    # elif opcion == "4":
-    #     cedula = int(input("Ingrese numero de cedula para Eliminar: "))
-    #     gd.eliminarDatos(cedula)
+    elif opcion == "4":
+        cedula = int(input("Ingrese numero de cedula para Eliminar: "))
+        gd.eliminarDatos(cedula)
         
     elif opcion == "5":
         #Con esta opcion se sale del programa
