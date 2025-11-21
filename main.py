@@ -33,6 +33,7 @@ while menuActivo:
             print(result.nombre,result.apellido,result.edad,result.correo,result.cedula)
     
     elif opcion == "3": 
+        #funcion para modificar los datos
         cedula = int(input("Ingrese numero de cedula para Modificar: "))
         dt=Datos()
         dt.nombre = str(input("Ingrese su nombre: "))
@@ -43,6 +44,7 @@ while menuActivo:
         gd.modificarDatos(cedula,dt)
     
     elif opcion == "4":
+        #funcion para eliminar los datos
         cedula = int(input("Ingrese numero de cedula para Eliminar: "))
         gd.eliminarDatos(cedula)
         
