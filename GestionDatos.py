@@ -23,3 +23,16 @@ class GestionDatos:
         for datos in self.lista:
             if datos.cedula == cedula:
                 return datos
+            else:
+                print("No se encontro la cedula")
+                print("------------------------")
+    
+#Metodo para modificar datos por cedula
+    def modificarDatos(self, cedula:int, nuevosDatos:Datos):
+        for i in range(len(self.lista)):
+            if self.lista[i].cedula == cedula:
+                self.lista[i] = nuevosDatos
+#                 return
+# #Metodo para eliminar datos por cedula
+#     def eliminarDatos(self, cedula:int):
+#         self.lista = [datos for datos in self.lista if datos.cedula != cedula]

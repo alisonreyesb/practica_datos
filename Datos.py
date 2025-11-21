@@ -42,3 +42,5 @@ class Datos:
     @cedula.setter
     def cedula(self,cedula:int):
         self._cedula=cedula
+
+    
