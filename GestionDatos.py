@@ -29,11 +29,13 @@ class GestionDatos:
     
 #Metodo para modificar datos por cedula
     def modificarDatos(self, cedula:int, nuevosDatos:Datos):
-        for i in range(len(self.lista)):
-            if self.lista[i].cedula == cedula:
-                self.lista[i] = nuevosDatos
+        for datos in range(len(self.lista)):
+            if self.lista[datos].cedula == cedula:
+                self.lista[datos] = nuevosDatos
                 return
             
 #Metodo para eliminar datos por cedula
     def eliminarDatos(self, cedula:int):
-            self.lista = [datos for datos in self.lista if datos.cedula != cedula]
+        for datos in self.lista:
+            if datos.cedula == cedula:
+                self.lista.pop(self.lista.index(datos))        
