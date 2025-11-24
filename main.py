@@ -8,6 +8,7 @@ menuActivo=True
 while menuActivo:
     #Se realiza un menu para verifica las funciones
     print("No Registros: ", len(gd.lista))
+    print("-----------------")
     print("Menu de opciones")
     print("1. Agregar")
     print("2. Consultar")
