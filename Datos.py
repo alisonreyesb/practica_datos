@@ -31,8 +31,8 @@ class Datos:
     def correo(self)->str:
         return self._correo
     
-    @edad.setter
-    def correo(self,correo:int):
+    @correo.setter
+    def correo(self,correo:str):
         self._correo=correo
         
     @property
@@ -42,3 +42,5 @@ class Datos:
     @cedula.setter
     def cedula(self,cedula:int):
         self._cedula=cedula
+
+    
