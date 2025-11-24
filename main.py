@@ -19,6 +19,7 @@ while menuActivo:
     opcion=input("Ingrese una opcion: ")
 
     if opcion == "1":
+        #funcion para agregar los datos
         dt=Datos()
         dt.nombre = str(input("Ingrese su nombre: "))
         dt.apellido = str(input("Ingrese su apellido: "))
@@ -28,6 +29,7 @@ while menuActivo:
         gd.agregar_datos(dt)
     
     elif opcion == "2":
+        #funcion para consultar los datos de un cliente por cedula 
         cedula = int(input("Ingrese numero de cedula para la Consulta: "))
         result=gd.consultarDatos(cedula)
         if(result!=None):
